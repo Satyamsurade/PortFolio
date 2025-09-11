@@ -1,8 +1,5 @@
-import project1 from "../assets/projects/project-1.jpg";
-import project2 from "../assets/projects/project-2.jpg";
-import project3 from "../assets/projects/project-3.jpg";
-import project4 from "../assets/projects/project-4.jpg";
-import Project5 from "../assets/projects/Project-5.jpg";
+import project1 from "../assets/projects/project1.jpg";
+import project2 from "../assets/projects/project2.jpg";
 
 export const HERO_CONTENT =  `I am a passionate MERN Stack Developer, certified in Full Stack Web Development (MERN) from 3Ri Technologies, Pune, with expertise in React.js, Next.js, JavaScript, and Tailwind CSS for building responsive, user-friendly interfaces. Skilled in Node.js, Express.js, and MongoDB, I have developed projects like a Job Portal application with Clerk authentication and Cloudinary integration. Having completed my Master of Computer Application (MCA), I bring a strong blend of technical knowledge and practical experience to deliver modern, scalable web solutions.`
 
@@ -58,7 +55,7 @@ export const PROJECTS = [
   {
     title: "Job Portal",
     description: "A platform for recruiters and job seekers.",
-    image: Project5,
+    image: project2,
     technologies: [
       "React.js",
       "Tailwind CSS",
