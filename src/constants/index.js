@@ -72,7 +72,7 @@ export const PROJECTS = [
   {
     title: "Portfolio Website",
     description: "Personal portfolio to showcase my work.",
-    image: "/images/portfolio.png",
+    image: project1,
     technologies: ["React", "Tailwind CSS"],
     link: "https://port-folio-8p6u.vercel.app/", // 🔗 Add link here
   },
