@@ -2,6 +2,7 @@ import project1 from "../assets/projects/project-1.jpg";
 import project2 from "../assets/projects/project-2.jpg";
 import project3 from "../assets/projects/project-3.jpg";
 import project4 from "../assets/projects/project-4.jpg";
+import Project5 from "../assets/projects/Project-5.jpg";
 
 export const HERO_CONTENT =  `I am a passionate MERN Stack Developer, certified in Full Stack Web Development (MERN) from 3Ri Technologies, Pune, with expertise in React.js, Next.js, JavaScript, and Tailwind CSS for building responsive, user-friendly interfaces. Skilled in Node.js, Express.js, and MongoDB, I have developed projects like a Job Portal application with Clerk authentication and Cloudinary integration. Having completed my Master of Computer Application (MCA), I bring a strong blend of technical knowledge and practical experience to deliver modern, scalable web solutions.`
 
@@ -55,57 +56,29 @@ export const EXPERIENCES = [
 
 export const PROJECTS = [
   {
-    title: "Task Managemen App",
-    image: project1,
-    description:
-    "A feature-rich note-taking application with functionalities like CRUD operations, archived and pinned notes, dark mode, speech-to-text, and multi-user support."  
-    ,
-    technologies: ["HTML", "CSS", "Bootstrap", "Java","Hibernate","Mysql"],
+    title: "Job Portal",
+    description: "A platform for recruiters and job seekers.",
+    image: Project5,
+    technologies: [
+      "React.js",
+      "Tailwind CSS",
+      "JavaScript",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+    ],
+    link: "https://mernjp-client.vercel.app/", // 🔗 Add link here
   },
-  
-  {
-    title: "E-Commerce Website",
-    image: project2,
-    description:
-      "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
-    technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
-  },
-
-  
-
   {
     title: "Portfolio Website",
-    image: project3,
-    description:
-      "A personal portfolio website showcasing projects, skills, and contact information.",
-    technologies: ["HTML", "CSS", "React", "Bootstrap"],
+    description: "Personal portfolio to showcase my work.",
+    image: "/images/portfolio.png",
+    technologies: ["React", "Tailwind CSS"],
+    link: "https://port-folio-8p6u.vercel.app/", // 🔗 Add link here
   },
-
-   {
-     title: "Weather App",
-    image: project3,
-    description:
-      "A weather forecasting application that provides real-time weather updates, temperature, and conditions based on user location or city search.",
-    technologies: ["Java", "Servlets", "JSP", "Maven", "OpenWeather API", "HTML", "CSS", "JavaScript"]
-   },
-
-   {
-    title: "Chat Application",
-    image: project4,
-    description:
-      "A real-time web-based chat application with features like user authentication, typing indicators, emoji support, and message differentiation for an interactive experience.",
-    technologies: ["HTML", "CSS", "Bootstrap", "JSP", "Servlet", "WebSocket", "Maven"]
-},
-  {
-    title: "Job Portal",
-  image: project4, // replace with your actual project image
-  description:
-    "A full-featured Job Portal web application with role-based access for Recruiters and Job Seekers. Recruiters can post and manage job listings, while users can register, browse jobs, and apply. Integrated Clerk for authentication, Cloudinary for file management, and MongoDB for secure data storage.",
-    technologies: ["React.js","Tailwind CSS","JavaScript","Node.js","Express.js","MongoDB",
-  ]
-  }
-
 ];
+
+
 
 export const CONTACT = {
   address: "Malegaon Dist-Nashik ",
