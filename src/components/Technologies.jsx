@@ -42,7 +42,8 @@ const Technologies = () => {
           variants={iconVarients(2.5)}
           initial="initial"
           animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4 hover:scale-110 transition-transform"
+          className="rounded-2xl border-4 border-neutral-800 p-4
+                     hover:scale-110 hover:border-red-600 transition-all"
         >
           <RiReactjsLine className="text-7xl text-cyan-400" />
         </motion.a>
@@ -55,7 +56,8 @@ const Technologies = () => {
           variants={iconVarients(3)}
           initial="initial"
           animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4 hover:scale-110 transition-transform"
+          className="rounded-2xl border-4 border-neutral-800 p-4
+                     hover:scale-110 hover:border-red-600 transition-all"
         >
           <FaNodeJs className="text-7xl text-green-600" />
         </motion.a>
@@ -68,7 +70,8 @@ const Technologies = () => {
           variants={iconVarients(5)}
           initial="initial"
           animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4 hover:scale-110 transition-transform"
+          className="rounded-2xl border-4 border-neutral-800 p-4
+                     hover:scale-110 hover:border-red-600 transition-all"
         >
           <SiJavascript className="text-7xl text-yellow-400" />
         </motion.a>
@@ -81,7 +84,8 @@ const Technologies = () => {
           variants={iconVarients(2)}
           initial="initial"
           animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4 hover:scale-110 transition-transform"
+          className="rounded-2xl border-4 border-neutral-800 p-4
+                     hover:scale-110 hover:border-red-600 transition-all"
         >
           <SiMongodb className="text-7xl text-green-500" />
         </motion.a>
@@ -94,7 +98,8 @@ const Technologies = () => {
           variants={iconVarients(6)}
           initial="initial"
           animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4 hover:scale-110 transition-transform"
+          className="rounded-2xl border-4 border-neutral-800 p-4
+                     hover:scale-110 hover:border-red-600 transition-all"
         >
           <SiMysql className="text-7xl text-blue-700" />
         </motion.a>

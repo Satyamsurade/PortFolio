@@ -5,6 +5,9 @@ import Technologies from "./components/Technologies";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import Certificate from "./components/Certificate"
+import Education from "./components/Education";
+
 const App = () => {
     return (
         <div className="overflow-x-hidden text-neutral-300 antialiased
@@ -17,8 +20,10 @@ const App = () => {
                 <Hero />
                 <About />
                 <Technologies/>
+                 <Certificate />
                 {/*<Experience />*/}
                 <Projects />
+                <Education />
                 <Contact/>
             </div>
         </div>

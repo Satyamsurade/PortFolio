@@ -1,5 +1,7 @@
 import project1 from "../assets/projects/project1.jpg";
 import project2 from "../assets/projects/project2.jpg";
+import cert1 from "../assets/certificates/cert1.jpg";
+import cert2 from "../assets/certificates/cert2.jpg";
 
 export const HERO_CONTENT =  `I am a passionate MERN Stack Developer, certified in Full Stack Web Development (MERN) from 3Ri Technologies, Pune, with expertise in React.js, Next.js, JavaScript, and Tailwind CSS for building responsive, user-friendly interfaces. Skilled in Node.js, Express.js, and MongoDB, I have developed projects like a Job Portal application with Clerk authentication and Cloudinary integration. Having completed my Master of Computer Application (MCA), I bring a strong blend of technical knowledge and practical experience to deliver modern, scalable web solutions.`
 
@@ -51,6 +53,9 @@ export const EXPERIENCES = [
   },
 ];
 
+
+
+
 export const PROJECTS = [
   {
     title: "Job Portal",
@@ -75,6 +80,49 @@ export const PROJECTS = [
   },
 ];
 
+export const CERTIFICATES = [
+  {
+    title: "React Developer",
+    description: "Completed a React.js certification from XYZ Academy.",
+    image: cert1,
+    link: "https://www.example.com/cert1",
+  },
+  {
+    title: "Node.js Developer",
+    description: "Completed Node.js certification from ABC Institute.",
+    image: cert2,
+    link: "https://www.example.com/cert2",
+  },
+  {
+    title: "Node.js Developer",
+    description: "Completed Node.js certification from ABC Institute.",
+    image: cert2,
+    link: "https://www.example.com/cert2",
+  },
+];
+
+export const EDUCATION = [
+  {
+    degree: "Master in Computer Application",
+    institute: "Dr. B. V. Hiray College of Management & Research Centre, Malegaon",
+    duration: "2023 – 2025",
+  },
+  {
+    degree: "Bachelor of Computer Science",
+    institute: "M. S. G College, Malegaon",
+    duration: "2020 – 2023",
+  },
+  {
+    degree: "Higher Secondary Certificate",
+    institute: "Kakani Junior College, Malegaon",
+    duration: "66.62%",
+  },
+  {
+    degree: "Secondary School Certificate",
+    institute: "Vardhaman Shikshan Sanstha, Malegaon",
+    duration: "88.60%",
+  },
+];
 
 
 export const CONTACT = {

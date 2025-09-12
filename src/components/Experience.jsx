@@ -1,51 +1,65 @@
-import { EXPERIENCES } from "../constants"
+import React from "react";
+import { EDUCATION } from "../constants";
 import { motion } from "framer-motion";
 
-const Experience = () => {
-    return (
-        <div className="border-b border-neutral-900 pb-4">
-            <motion.h1
-                whileInView={{ opacity: 1, y: 0 }}
-                initial={{ opacity: 0, y: -100 }}
-                transition={{ duration: 0.5 }}
-                className="my-20 text-center text-4xl">Experience</motion.h1>
-            <div>
-                {EXPERIENCES.map((experience, index) => (
-                    <div key={index}
-                        className="mb-8 flex flex-wrap lg:justify-center"  >
+const cardVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.2, duration: 0.6, type: "spring" },
+  }),
+};
 
-                        <motion.div
-                            whileInView={{ opacity: 1, x: 0 }}
-                            initial={{ opacity: 0, x: -100 }}
-                            transition={{ duration: 1 }}
-                            className="w-full lg:w-1/4">
-                            <p className="mb-2 text-sm text-neutral-400">{experience.year}</p>
-                        </motion.div>
+const Education = () => {
+  return (
+    <section className="border-b border-neutral-900 px-5 md:px-20 py-16 relative">
+      {/* Section Heading */}
+      <motion.h1
+        initial={{ opacity: 0, y: -60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="text-center text-5xl font-extrabold mb-14 tracking-wide
+                   text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400"
+      >
+        Education
+      </motion.h1>
 
-                        <motion.div
-                            whileInView={{ opacity: 1, x: 0 }}
-                            initial={{ opacity: 0, x: 100 }}
-                            transition={{ duration: 1 }}
+      {/* Animated Cards */}
+      <div className="flex flex-col items-center gap-12">
+        {EDUCATION.map((edu, index) => (
+          <motion.a
+            key={index}
+            href={edu.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            custom={index}
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.98 }}
+            className="w-full md:w-[700px] rounded-2xl
+                       shadow-lg bg-neutral-900/90 border border-neutral-800
+                       hover:border-cyan-400 transition-all duration-300
+                       cursor-pointer group p-8"
+          >
+            <h2 className="text-2xl font-semibold mb-2 text-cyan-300 group-hover:text-purple-300 transition">
+              {edu.degree}
+            </h2>
+            <p className="text-neutral-300 mb-1 text-lg">{edu.institute}</p>
+            <p className="text-neutral-400 text-sm">{edu.duration}</p>
+          </motion.a>
+        ))}
+      </div>
 
-                            className="w-full max-w-xl lg:w-3/4">
-                            <h6 className="mb-2 font-semibold">
-                                {experience.role} -{" "}
-                                <span className="text-sm text-purple-100 ">{experience.company}</span>
+      {/* Subtle decorative glows */}
+      <div className="pointer-events-none absolute -left-20 top-1/3 w-72 h-72 rounded-full bg-cyan-500/20 blur-3xl" />
+      <div className="pointer-events-none absolute -right-20 top-2/3 w-72 h-72 rounded-full bg-purple-500/20 blur-3xl" />
+    </section>
+  );
+};
 
-                            </h6>
-
-                            <p className=" mb-4 text-neutral-400">{experience.description}</p>
-                            {experience.technologies.map((tech, index) => (
-                                <span key={index} className="mr-2 mt-4 rounded bg-neutral-900 px-2 py-2 text-sm font-medium text-purple-800">{tech}</span>
-
-                            ))}
-                        </motion.div>
-
-                    </div>
-                ))}
-            </div>
-        </div>
-    )
-}
-
-export default Experience
+export default Education;
