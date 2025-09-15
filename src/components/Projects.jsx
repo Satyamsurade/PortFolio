@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Projects = () => {
   return (
-    <section className="border-b border-neutral-900 px-5 md:px-20 pb-20">
+    <section id="projects" className="border-b border-neutral-900 px-5 md:px-20 pb-20">
       {/* --- Top Divider Line --- */}
       <div className="w-full border-t border-neutral-700 mt-0 mb-12" />
 

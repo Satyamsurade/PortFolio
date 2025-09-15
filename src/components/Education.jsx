@@ -54,7 +54,7 @@ const Education = () => {
         }
       `}</style>
 
-      <section className="education-section">
+      <section id="education" className="education-section">
         <h1 className="education-heading">Education</h1>
 
         <div className="education-cards">

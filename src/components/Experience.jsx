@@ -13,7 +13,7 @@ const cardVariants = {
 
 const Education = () => {
   return (
-    <section className="border-b border-neutral-900 px-5 md:px-20 py-16 relative">
+    <section id="experience" className="border-b border-neutral-900 px-5 md:px-20 py-16 relative">
       {/* Section Heading */}
       <motion.h1
         initial={{ opacity: 0, y: -60 }}
