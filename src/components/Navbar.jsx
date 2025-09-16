@@ -2,6 +2,7 @@
 import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 import { useState } from "react";
 
+
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
@@ -18,14 +19,14 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 bg-neutral-900/70 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        {/* Logo / Name */}
+        {/* Left: Logo or Name */}
         <div className="flex items-center space-x-2">
           {/* <img src={logo} alt="logo" className="w-10 h-10" /> */}
           <a
             href="#hero"
             className="text-2xl font-bold tracking-wide text-white hover:text-blue-400 transition-colors"
           >
-            SKS
+            Satyam
           </a>
         </div>
 
@@ -41,6 +42,18 @@ const Navbar = () => {
               </a>
             </li>
           ))}
+
+          {/* 👉 Resume Button */}
+          <li>
+            <a
+              href="/resume" // place resume.pdf inside public/ folder
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2 rounded-md bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors"
+            >
+              Resume
+            </a>
+          </li>
         </ul>
 
         {/* Social Icons */}
@@ -99,6 +112,20 @@ const Navbar = () => {
                 </a>
               </li>
             ))}
+
+            {/* 👉 Resume Button for Mobile */}
+            <li>
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block px-4 py-2 rounded-md bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors"
+                onClick={() => setOpen(false)}
+              >
+                Resume
+              </a>
+            </li>
+
             <div className="flex gap-4 text-2xl pt-4">
               <a
                 href="https://www.linkedin.com/in/satyamsurade06/"
