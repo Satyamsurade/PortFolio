@@ -17,7 +17,7 @@ const Hero = () => {
             id="hero"
             className="relative border-b border-neutral-900 pb-4 lg:mb-35 overflow-hidden"
         >
-            {/* ---- Background Image Behind Content ---- */}
+            {/* ---- Background / Hero Image ---- */}
             <motion.img
                 initial={{ scale: 1.05, opacity: 0 }}
                 animate={{ scale: 1, opacity: 0.5 }}
@@ -25,12 +25,8 @@ const Hero = () => {
                 src={Satyam}
                 alt="Satyam"
                 className="
-                    absolute
-                    top-0
-                    right-0
-                    w-[400px]
-                    h-[500px]   /* 🔑 fixed height for the hero image */
-                    
+                    w-full max-w-[400px] h-auto mx-auto mt-6
+                    lg:absolute lg:top-0 lg:right-0 lg:w-[400px] lg:h-[500px]
                 "
             />
 

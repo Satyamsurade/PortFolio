@@ -4,7 +4,7 @@ import { CERTIFICATES } from "../constants";
 
 const Certificate = () => {
   return (
-    <section id="certificate"  className="w-full flex flex-col items-center py-6">
+    <section id="certificates"  className="w-full flex flex-col items-center py-6">
       {/* Section Heading */}
       <h1 className="text-center text-4xl font-bold mb-10">
         Certificates

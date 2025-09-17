@@ -2,7 +2,6 @@
 import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 import { useState } from "react";
 
-
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
@@ -46,7 +45,7 @@ const Navbar = () => {
           {/* 👉 Resume Button */}
           <li>
             <a
-              href="/resume" // place resume.pdf inside public/ folder
+              href="/resume.pdf"  // ✅ must match the exact file name in public folder
               target="_blank"
               rel="noopener noreferrer"
               className="px-4 py-2 rounded-md bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors"
@@ -116,7 +115,7 @@ const Navbar = () => {
             {/* 👉 Resume Button for Mobile */}
             <li>
               <a
-                href="/resume.pdf"
+                href="/resume.pdf"  // ✅ same here
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block px-4 py-2 rounded-md bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors"
