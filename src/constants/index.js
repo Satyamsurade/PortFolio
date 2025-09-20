@@ -85,19 +85,18 @@ export const CERTIFICATES = [
     title: "MernStack Developer",
     description: "Completed a Full Stack WebDevlopment Training In MernStack certification from 3RI Technologies, Pune.",
     image: cert1,
-    link: "https://www.example.com/cert1",
   },
   {
     title: "MongoDB Training",
     description: "Completed Node.js certification from ABC Institute.",
     image: cert2,
-    link: "https://www.example.com/cert2",
+    
   },
   {
     title: "Node.js Developer",
     description: "Completed Node.js certification from ABC Institute.",
     image: cert2,
-    link: "https://www.example.com/cert2",
+
   },
 ];
 
