@@ -7,12 +7,12 @@ const Projects = () => {
       {/* --- Top Divider Line --- */}
       <div className="w-full border-t border-neutral-700 mt-0 mb-12" />
 
-      {/* --- Section Heading --- */}
+      {/* --- Section Heading with Animated Gradient --- */}
       <motion.h1
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 0.5 }}
-        className="text-center text-4xl font-bold mb-16"
+        className="text-center text-4xl font-bold mb-16 projects-heading"
       >
         Projects
       </motion.h1>
@@ -29,6 +29,7 @@ const Projects = () => {
             whileTap={{ scale: 0.97 }}
             className="block w-full md:w-[700px] h-[420px] rounded-2xl shadow-lg
                        bg-neutral-900 hover:bg-neutral-800 transition-all
+                       hover:shadow-[0_0_25px_rgba(0,123,255,0.7)]
                        duration-300 p-5 cursor-pointer"
           >
             <img
@@ -52,6 +53,22 @@ const Projects = () => {
           </motion.a>
         ))}
       </div>
+
+      {/* 🔑 Gradient animation for heading */}
+      <style>{`
+        .projects-heading {
+          background: linear-gradient(270deg, #00f0ff, #ff00ff, #00f0ff);
+          background-size: 600% 600%;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          animation: gradientMove 6s ease infinite;
+        }
+        @keyframes gradientMove {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
+      `}</style>
     </section>
   );
 };

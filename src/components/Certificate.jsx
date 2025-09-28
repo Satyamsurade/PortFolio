@@ -1,88 +1,78 @@
-// src/components/Certificate.jsx
-import React, { useState } from "react";
+import React from "react";
 import { CERTIFICATES } from "../constants";
-import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Certificate = () => {
-  const [revealed, setRevealed] = useState(
-    Array(CERTIFICATES.length).fill(false)
-  );
-
-  const handleReveal = (index) => {
-    setRevealed((prev) =>
-      prev.map((v, i) => (i === index ? true : v))
-    );
-  };
-
-  const handleHideAndOpen = (index, link) => {
-    // Re-blur the card
-    setRevealed((prev) =>
-      prev.map((v, i) => (i === index ? false : v))
-    );
-    // Open certificate in new tab
-    window.open(link, "_blank", "noopener,noreferrer");
-  };
-
   return (
     <section
       id="certificates"
       className="w-full flex flex-col items-center py-6"
     >
-      <h1 className="text-center text-4xl font-bold mb-10">Certificates</h1>
+      {/* 🌈 Animated Gradient Heading */}
+      <h1 className="text-center text-4xl font-bold certificate-heading mb-10">
+        Certificates
+      </h1>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4 md:px-8 max-w-6xl">
+      {/* Grid with slightly larger cards and more spacing */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-6 md:px-10 max-w-7xl">
         {CERTIFICATES.map((cert, index) => (
           <div
             key={index}
-            className="relative bg-white dark:bg-neutral-800 shadow-lg rounded-xl overflow-hidden
-                       transform hover:scale-105 transition duration-300 flex flex-col"
+            className="relative bg-white dark:bg-neutral-800 
+                       shadow-lg hover:shadow-[0_0_25px_rgba(0,123,255,0.7)]
+                       rounded-xl overflow-hidden
+                       transform hover:scale-105 transition duration-300 flex flex-col
+                       h-[420px] w-full"
           >
-            {/* Image with blur until revealed */}
-            <img
-              src={cert.image}
-              alt={cert.title}
-              className={`w-full h-48 object-cover transition duration-300 ${
-                revealed[index] ? "blur-0" : "blur-md"
-              }`}
-            />
-
-            {/* Overlay Eye Button – show when blurred */}
-            {!revealed[index] && (
-              <button
-                onClick={() => handleReveal(index)}
-                className="absolute inset-0 flex items-center justify-center
-                           bg-black/40 hover:bg-black/50 transition
-                           text-white text-3xl"
-                title="View Certificate"
-              >
-                <FaEye />
-              </button>
+            {/* Slightly blurred image */}
+            {cert.image && (
+              <img
+                src={cert.image}
+                alt={cert.title}
+                className="w-full h-56 object-cover transition duration-300"
+                style={{ filter: "blur(4px)" }}
+              />
             )}
 
-            {/* Card Content */}
-            <div className="p-4 flex-1 flex flex-col justify-between">
-              <h3 className="text-lg font-semibold mb-2 text-center">
+            {/* Card content */}
+            <div className="p-6 flex-1 flex flex-col justify-between">
+              <h3 className="text-xl font-semibold mb-3 text-center">
                 {cert.title}
               </h3>
-              <p className="text-gray-600 dark:text-gray-300 text-sm text-center">
+              <p className="text-gray-600 dark:text-gray-300 text-base text-center mb-2">
                 {cert.description}
               </p>
             </div>
 
-            {/* Eye slash – click to re-blur & open certificate in new tab */}
-            {revealed[index] && (
-              <button
-                onClick={() => handleHideAndOpen(index, cert.link)}
-                className="absolute top-2 right-2 bg-black/40 hover:bg-black/60
-                           text-white p-2 rounded-full transition"
-                title="Hide & Open Certificate"
+            {/* Open certificate PDF */}
+            <div className="px-6 pb-6 text-center">
+              <a
+                href={cert.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-5 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow-lg transition duration-300"
               >
-                <FaEyeSlash />
-              </button>
-            )}
+                View Original Certificate
+              </a>
+            </div>
           </div>
         ))}
       </div>
+
+      {/* Gradient animation for heading */}
+      <style>{`
+        .certificate-heading {
+          background: linear-gradient(270deg, #00f0ff, #ff00ff, #00f0ff);
+          background-size: 600% 600%;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          animation: gradientMove 6s ease infinite;
+        }
+        @keyframes gradientMove {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
+      `}</style>
     </section>
   );
 };

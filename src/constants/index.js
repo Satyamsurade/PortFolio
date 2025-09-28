@@ -1,7 +1,7 @@
 import project1 from "../assets/projects/project1.jpg";
 import project2 from "../assets/projects/project2.jpg";
-import cert1 from "../assets/certificates/cert1.jpg";
-import cert2 from "../assets/certificates/cert2.jpg";
+//import cert1 from "/Certificate/cert1.pdf";
+//import cert2 from "/Certificate/cert2.pdf";
 
 export const HERO_CONTENT =  `I am a passionate MERN Stack Developer, certified in Full Stack Web Development (MERN) from 3Ri Technologies, Pune, with expertise in React.js, Next.js, JavaScript, and Tailwind CSS for building responsive, user-friendly interfaces. Skilled in Node.js, Express.js, and MongoDB, I have developed projects like a Job Portal application with Clerk authentication and Cloudinary integration. Having completed my Master of Computer Application (MCA), I bring a strong blend of technical knowledge and practical experience to deliver modern, scalable web solutions.`
 
@@ -82,22 +82,23 @@ export const PROJECTS = [
 
 export const CERTIFICATES = [
   {
-    title: "MernStack Developer",
-    description: "Completed a Full Stack WebDevlopment Training In MernStack certification from 3RI Technologies, Pune.",
-    image: cert1,
+    title: "MERN Stack Certificate",
+    description: "Certification for MERN Stack course",
+    image: "/certificates/cert1.png",  // thumbnail
+    link: "/certificates/cert1.pdf"    // PDF file path
   },
   {
-    title: "MongoDB Training",
-    description: "Completed Node.js certification from ABC Institute.",
-    image: cert2,
-    
+    title: "React Certificate",
+    description: "React JS Certification",
+    image: "/certificates/cert2.png",
+    link: "/certificates/cert2.pdf"
   },
   {
-    title: "Node.js Developer",
-    description: "Completed Node.js certification from ABC Institute.",
-    image: cert2,
-
-  },
+    title: "React Certificate",
+    description: "React JS Certification",
+    image: "/certificates/cert2.png",
+    link: "/certificates/cert2.pdf"
+  }
 ];
 
 export const EDUCATION = [

@@ -38,7 +38,9 @@ const App = () => {
       {/* ---------- Main Content ---------- */}
       <div className="container mx-auto px-6 sm:px-8 lg:px-12 py-12 space-y-24">
         <Navbar />
+        <div className="pt-20">
         <Hero />
+        </div>
         <About />
         <Technologies />
         <Certificate />

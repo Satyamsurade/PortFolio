@@ -19,11 +19,12 @@ const iconVarients = (duration) => ({
 const Technologies = () => {
   return (
     <div id="technologies" className="border-b border-neutral-800 pb-24">
+      {/* 🌈 Animated Gradient Heading like About Me */}
       <motion.h1
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 1.5 }}
-        className="my-20 text-center text-4xl"
+        className="my-20 text-center text-4xl font-bold about-heading"
       >
         Technologies
       </motion.h1>
@@ -32,7 +33,7 @@ const Technologies = () => {
         whileInView={{ opacity: 1, x: 0 }}
         initial={{ opacity: 0, x: -100 }}
         transition={{ duration: 1.5 }}
-        className="flex flex-wrap items-center justify-center gap-4"
+        className="flex flex-wrap items-center justify-center gap-6"
       >
         {/* React */}
         <motion.a
@@ -42,8 +43,9 @@ const Technologies = () => {
           variants={iconVarients(2.5)}
           initial="initial"
           animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4
-                     hover:scale-110 hover:border-red-600 transition-all"
+          className="rounded-2xl border-4 border-neutral-800 p-6
+                     text-white shadow-lg transition-all
+                     hover:scale-110 hover:shadow-[0_0_30px_rgba(0,123,255,0.9)]"
         >
           <RiReactjsLine className="text-7xl text-cyan-400" />
         </motion.a>
@@ -56,8 +58,9 @@ const Technologies = () => {
           variants={iconVarients(3)}
           initial="initial"
           animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4
-                     hover:scale-110 hover:border-red-600 transition-all"
+          className="rounded-2xl border-4 border-neutral-800 p-6
+                     text-white shadow-lg transition-all
+                     hover:scale-110 hover:shadow-[0_0_30px_rgba(0,123,255,0.9)]"
         >
           <FaNodeJs className="text-7xl text-green-600" />
         </motion.a>
@@ -70,8 +73,9 @@ const Technologies = () => {
           variants={iconVarients(5)}
           initial="initial"
           animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4
-                     hover:scale-110 hover:border-red-600 transition-all"
+          className="rounded-2xl border-4 border-neutral-800 p-6
+                     text-white shadow-lg transition-all
+                     hover:scale-110 hover:shadow-[0_0_30px_rgba(0,123,255,0.9)]"
         >
           <SiJavascript className="text-7xl text-yellow-400" />
         </motion.a>
@@ -84,8 +88,9 @@ const Technologies = () => {
           variants={iconVarients(2)}
           initial="initial"
           animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4
-                     hover:scale-110 hover:border-red-600 transition-all"
+          className="rounded-2xl border-4 border-neutral-800 p-6
+                     text-white shadow-lg transition-all
+                     hover:scale-110 hover:shadow-[0_0_30px_rgba(0,123,255,0.9)]"
         >
           <SiMongodb className="text-7xl text-green-500" />
         </motion.a>
@@ -98,12 +103,29 @@ const Technologies = () => {
           variants={iconVarients(6)}
           initial="initial"
           animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4
-                     hover:scale-110 hover:border-red-600 transition-all"
+          className="rounded-2xl border-4 border-neutral-800 p-6
+                     text-white shadow-lg transition-all
+                     hover:scale-110 hover:shadow-[0_0_30px_rgba(0,123,255,0.9)]"
         >
           <SiMysql className="text-7xl text-blue-700" />
         </motion.a>
       </motion.div>
+
+      {/* 🔑 Gradient animation keyframes for About Me style */}
+      <style>{`
+        .about-heading {
+          background: linear-gradient(270deg, #00f0ff, #ff00ff, #00f0ff);
+          background-size: 600% 600%;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          animation: gradientMove 6s ease infinite;
+        }
+        @keyframes gradientMove {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
+      `}</style>
     </div>
   );
 };
