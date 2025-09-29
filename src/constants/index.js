@@ -75,29 +75,29 @@ export const PROJECTS = [
     title: "Portfolio Website",
     description: "Personal portfolio to showcase my work.",
     image: project1,
-    technologies: ["React", "Tailwind CSS"],
+    technologies: ["React", "Tailwind CSS", "Vercel", "HTML5", "Framer Motion"],
     link: "https://port-folio-8p6u.vercel.app/", // 🔗 Add link here
   },
 ];
 
 export const CERTIFICATES = [
   {
+    title: "MongoDB Certificate",
+    description: "Introduction to NoSQL Architecture with MongoDB",
+    image: "/certificates/cert2.png",
+    link: "/certificates/cert2.pdf"
+  },
+  {
     title: "MERN Stack Certificate",
-    description: "Certification for MERN Stack course",
+    description: "Certification for MERN Stack course from 3RI Technologies, Pune",
     image: "/certificates/cert1.png",  // thumbnail
     link: "/certificates/cert1.pdf"    // PDF file path
   },
   {
     title: "React Certificate",
-    description: "React JS Certification",
-    image: "/certificates/cert2.png",
-    link: "/certificates/cert2.pdf"
-  },
-  {
-    title: "React Certificate",
-    description: "React JS Certification",
-    image: "/certificates/cert2.png",
-    link: "/certificates/cert2.pdf"
+    description: "React JS Certification from Infosys Springboard",
+    image: "/certificates/cert3.png",
+    link: "/certificates/cert3.pdf"
   }
 ];
 
