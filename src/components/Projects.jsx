@@ -5,7 +5,7 @@ const Projects = () => {
   return (
     <section id="projects" className="border-b border-neutral-900 px-5 md:px-20 pb-20">
       {/* --- Top Divider Line --- */}
-      <div className="w-full border-t border-neutral-700 mt-0 mb-12" />
+      <div className="w-full border-t border-neutral-900 mt-0 mb-12" />
 
       {/* --- Section Heading with Animated Gradient --- */}
       <motion.h1
@@ -27,16 +27,26 @@ const Projects = () => {
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.97 }}
-            className="block w-full md:w-[700px] h-[420px] rounded-2xl shadow-lg
+            className="block w-full md:w-[700px] rounded-2xl shadow-lg
                        bg-neutral-900 hover:bg-neutral-800 transition-all
                        hover:shadow-[0_0_25px_rgba(0,123,255,0.7)]
                        duration-300 p-5 cursor-pointer"
           >
+            {/* ✅ Option 1: Show full image (no crop) */}
             <img
               src={project.image}
               alt={project.title}
-              className="w-full h-48 object-cover rounded-xl mb-4"
+              className="w-full max-h-72 md:max-h-96 object-contain rounded-xl mb-4"
             />
+
+            {/* ✅ Option 2: Cropped preview but responsive 
+            <img
+              src={project.image}
+              alt={project.title}
+              className="w-full h-56 sm:h-64 md:h-72 object-cover rounded-xl mb-4"
+            />
+            */}
+
             <h2 className="text-xl font-semibold mb-2">{project.title}</h2>
             <p className="text-neutral-400 mb-4">{project.description}</p>
 

@@ -40,7 +40,7 @@ const Hero = () => {
           <img
             src={Satyam}
             alt="Satyam"
-            className="rounded-xl shadow-lg w-full max-w-[400px] h-auto"
+            className="rounded-xl shadow-lg w-full max-w-[500px] h-auto"
           />
         </motion.div>
       </div>

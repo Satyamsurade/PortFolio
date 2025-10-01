@@ -44,12 +44,13 @@ const Certificate = () => {
             </div>
 
             {/* Open certificate PDF */}
-            <div className=" px-6 pb-6 text-center">
+            <div className="px-6 pb-6 text-center">
               <a
                 href={cert.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-5 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow-lg transition duration-300"
+                className="inline-block px-3 py-2 text-sm bg-blue-600 hover:bg-blue-700 
+                           text-white rounded-lg shadow-lg transition duration-300"
               >
                 View Original Certificate
               </a>

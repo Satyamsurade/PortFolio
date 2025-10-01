@@ -3,7 +3,13 @@ import project2 from "../assets/projects/project2.jpg";
 //import cert1 from "/Certificate/cert1.pdf";
 //import cert2 from "/Certificate/cert2.pdf";
 
-export const HERO_CONTENT =  `I am a passionate MERN Stack Developer, certified in Full Stack Web Development (MERN) from 3Ri Technologies, Pune, with expertise in React.js, Next.js, JavaScript, and Tailwind CSS for building responsive, user-friendly interfaces. Skilled in Node.js, Express.js, and MongoDB, I have developed projects like a Job Portal application with Clerk authentication and Cloudinary integration. Having completed my Master of Computer Application (MCA), I bring a strong blend of technical knowledge and practical experience to deliver modern, scalable web solutions.`
+export const HERO_CONTENT =  `I am a passionate MERN Stack Developer, certified in Full Stack Web Development 
+              (MERN) from 3Ri Technologies, Pune, with expertise in React.js, Next.js, JavaScript, and Tailwind
+               CSS for building responsive, user-friendly interfaces. Skilled in Node.js, Express.js, and 
+               MongoDB, I have developed projects like a Job Portal application with Clerk authentication and 
+               Cloudinary integration. Having completed my Master of Computer Application (MCA), I bring a 
+               strong blend of technical knowledge and practical experience to deliver modern, scalable web 
+               solutions.`
 
 export const ABOUT_TEXT = `I am a dedicated and career-driven MERN Stack Developer, certified in Full Stack 
                   Web Development (MERN) from 3Ri Technologies, Pune. With expertise in React.js, Next.js, 
@@ -17,10 +23,7 @@ export const ABOUT_TEXT = `I am a dedicated and career-driven MERN Stack Develop
                   experienced in deploying production-ready applications on Vercel and Netlify.
                   Having successfully completed my Master of Computer Application (MCA), I am actively
                    seeking opportunities where I can apply my skills, contribute to real-world projects, 
-                   and grow as a full stack developer. With a strong foundation in both front-end design 
-                   and backend development, I am committed to delivering solutions that enhance user 
-                   experience, support business growth, and showcase my dedication to continuous learning 
-                   and professional excellence.`
+                   and grow as a full stack developer.`
 
 export const EXPERIENCES = [
   {
