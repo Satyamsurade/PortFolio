@@ -3,6 +3,8 @@ import { MdLocationOn, MdEmail } from "react-icons/md";
 import { FiPhone } from "react-icons/fi";
 
 const Contact = () => {
+  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
   const contactItems = [
     {
       icon: <MdLocationOn className="text-3xl text-cyan-400" />,
@@ -19,27 +21,26 @@ const Contact = () => {
     {
       icon: <MdEmail className="text-3xl text-pink-400" />,
       text: "satyamsurade06@gmail.com",
-      href: "https://mail.google.com/mail/?view=cm&fs=1&to=satyamsurade06@gmail.com",
+      href: isMobile
+        ? "mailto:satyamsurade06@gmail.com" // 📱 Mobile → Gmail app
+        : "https://mail.google.com/mail/?view=cm&fs=1&to=satyamsurade06@gmail.com", // 💻 Desktop → Gmail Web
       hoverColor: "hover:text-pink-400",
     },
   ];
 
   return (
     <div id="contact" className="border-b border-neutral-900 pb-20 px-5 md:px-20">
-      {/* Gradient Heading */}
       <h1 className="my-10 text-center text-4xl font-bold contact-heading">
         Contact
       </h1>
 
-      {/* Contact Cards */}
       <div className="flex flex-col md:flex-row justify-center items-center gap-8 mt-10">
-        {contactItems.map((item, index) => (
+        {contactItems.map((item, index) =>
           item.href ? (
-            // Clickable card (phone/email)
             <a
               key={index}
               href={item.href}
-              target="_blank"       // 🔹 open in new tab
+              target="_blank"
               rel="noopener noreferrer"
               className="flex flex-col items-center justify-center p-6 rounded-2xl
                          bg-neutral-800 shadow-lg transition-all cursor-pointer
@@ -47,12 +48,13 @@ const Contact = () => {
                          hover:shadow-[0_0_25px_rgba(0,123,255,0.7)]"
             >
               {item.icon}
-              <span className={`mt-3 text-lg text-gray-300 ${item.hoverColor} transition-colors`}>
+              <span
+                className={`mt-3 text-lg text-gray-300 ${item.hoverColor} transition-colors`}
+              >
                 {item.text}
               </span>
             </a>
           ) : (
-            // Non-clickable card (address)
             <div
               key={index}
               className="flex flex-col items-center justify-center p-6 rounded-2xl
@@ -61,15 +63,16 @@ const Contact = () => {
                          hover:shadow-[0_0_25px_rgba(0,123,255,0.7)]"
             >
               {item.icon}
-              <span className={`mt-3 text-lg text-gray-300 ${item.hoverColor} transition-colors`}>
+              <span
+                className={`mt-3 text-lg text-gray-300 ${item.hoverColor} transition-colors`}
+              >
                 {item.text}
               </span>
             </div>
           )
-        ))}
+        )}
       </div>
 
-      {/* Gradient animation for heading */}
       <style>{`
         .contact-heading {
           background: linear-gradient(270deg, #00f0ff, #ff00ff, #00f0ff);
